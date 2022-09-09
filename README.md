@@ -1,1 +1,2 @@
-# face_auto_screen_lock
+# Launch with :
+$ venv/bin/python3 ./face_lock_screen.py
