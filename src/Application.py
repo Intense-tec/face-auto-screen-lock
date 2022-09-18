@@ -17,6 +17,7 @@ class Application(tk.Tk):
         self.configure(bg=self.bg_color)
         self.minsize(900, 600)
         self.maxsize(900, 600)
+        self.tk.call('wm', 'iconphoto', self._w, ImageTk.PhotoImage(file='src/assets/img/window_icon.png'))
         self.add_button("Cancel", "app_quit", 780, 550, 100)
         self.add_button("Save", "", 670, 550, 100)
         self.add_button("About", "about", 10, 550, 100)

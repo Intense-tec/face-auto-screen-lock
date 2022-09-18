@@ -52,7 +52,6 @@ class FaceRecognition:
                 return None
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
-            print("KO 2")
             return None
 
         return ret, frame
