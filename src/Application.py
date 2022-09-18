@@ -18,7 +18,7 @@ class Application(tk.Tk):
         self.maxsize(900, 600)
         self.add_button("Cancel", "app_quit", 780, 550, 100)
         self.add_button("Save", "", 670, 550, 100)
-        self.add_button("About", "", 10, 550, 100)
+        self.add_button("About", "about", 10, 550, 100)
         self.face_recognition = FaceRecognition()
 
     def add_button(self, label, btn_type, x, y, width):
@@ -26,6 +26,9 @@ class Application(tk.Tk):
         match btn_type:
             case 'app_quit':
                 command = self.quit
+            case 'about':
+                command = self.about_window
+
         button_font = font.Font(family='Helvetica', weight='bold')
         btn = tk.Button(self, text=label, command=command, bg="#92c3d1", fg="#f0f0f0", font=button_font)
         btn.pack()
@@ -48,6 +51,10 @@ class Application(tk.Tk):
             self.canvas.create_image(0, 0, image=self.photo, anchor=tk.NW)
         self.after(1, self.update)
 
+    def about_window(self):
+        about_window = tk.Toplevel(self)
+        about_window.title("About")
+        about_window.geometry("200x200")
 
 if __name__ == "__main__":
     app = Application("Face auto screen lock")
