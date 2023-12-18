@@ -10,3 +10,5 @@ This project allows you to lock your screen if you leave your computer based a f
 
 # Launch with :
 `venv/bin/python3 ./face_lock_screen.py`
+
+By Oussama BRICH (contact@oussama-brich.com), No constraints to use this code.
